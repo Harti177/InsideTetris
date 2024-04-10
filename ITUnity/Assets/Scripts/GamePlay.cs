@@ -21,6 +21,7 @@ public class GamePlay : MonoBehaviour
 
     private float time = 0f;
     private float playTime = 0.5f;
+    private float placeDownTime = 0f; 
 
     private int score = 0; 
     private int lines = 0;
@@ -56,7 +57,17 @@ public class GamePlay : MonoBehaviour
     [SerializeField] private GameObject highScoresText;
     #endregion UI
 
+    #region Audio
+    [SerializeField] private AudioSource gameStartAudio;
+    [SerializeField] private AudioSource gameOverAudio;
+    [SerializeField] private AudioSource pieceDownAudio;
+    [SerializeField] private AudioSource piecePlacedAudio;
+    [SerializeField] private AudioSource gameBackgroundAudio;
+    #endregion Audio
+
     [SerializeField] private Transform interactor;
+
+    [SerializeField] private Transform indicator; 
 
     private Color[] colors = new Color[3] { Color.red, Color.yellow, Color.blue };
 
@@ -96,8 +107,23 @@ public class GamePlay : MonoBehaviour
             return; 
         }
 
-        //Move time
-        time += Time.deltaTime;
+        if(currentPiece != null)
+        {
+            if (currentPiece.seenByTheUser)
+            {
+                //Increase time
+                time += Time.deltaTime;
+                placeDownTime += Time.deltaTime;
+            }
+            else
+            {
+                Vector3 viewpos = indicator.GetComponent<CheckInViewPort>().IsObjectInViewPort();
+                if (viewpos.x > 0 && viewpos.y > 0 && viewpos.z > 0)
+                {
+                    currentPiece.seenByTheUser = true;
+                }
+            }
+        }
 
         //Game Play
         if (gameStarted)
@@ -106,12 +132,13 @@ public class GamePlay : MonoBehaviour
             level = (lines / 4);
 
             //Piece initialization
-            if (piecePlacedDown || currentPiece == null)
+            if ((piecePlacedDown && placeDownTime > 0.5f) || currentPiece == null)
             {
                 if(currentPiece != null) FillBox(currentPiece.values, true);
 
                 if (piecePlacedDown)
                 {
+                    piecePlacedAudio.Play(); 
                     int noOfLinesCompleteThisRound = 0; 
                     for (int j = 0; j < array.GetLength(1); j++)
                     {
@@ -139,7 +166,7 @@ public class GamePlay : MonoBehaviour
                                     {
                                         if(CheckBox(a, b + 1))
                                         {
-                                            FillBox(a, b, true, true);
+                                            FillBox(a, b, true, GetBoxColor(a, b + 1));
                                         }
                                     }
                                 }
@@ -152,7 +179,7 @@ public class GamePlay : MonoBehaviour
                     score += 4;
 
                     if (noOfLinesCompleteThisRound > 0)
-                        score += (noOfLinesCompleteThisRound + (2 * (noOfLinesCompleteThisRound - 1))) * (100 * (xLength/40));
+                        score += (noOfLinesCompleteThisRound + (2 * (noOfLinesCompleteThisRound - 1))) * (100 * (int)Mathf.Ceil(xLength / 40f));
                     loadingTextText.text = "Score " + score.ToString();
                     lines += noOfLinesCompleteThisRound; 
                 }
@@ -173,6 +200,10 @@ public class GamePlay : MonoBehaviour
 
                 currentPiece.yPosition = yPositionForNext;
                 currentPiece.xPosition = xPositionForNext;
+
+                indicator.gameObject.SetActive(true);
+                array[xPositionForNext, yPositionForNext - 1].SetInteractorPosition(indicator);
+                indicator.GetComponentInChildren<TextMeshPro>().text = GetPieceIndicator();
             }
 
             //Set null move if the piece is not fully available 
@@ -188,6 +219,7 @@ public class GamePlay : MonoBehaviour
 
                 if (stepReached)
                 {
+                    if(indicator.gameObject.activeInHierarchy) indicator.gameObject.SetActive(false); 
                     time = 0f;
                 }
             }
@@ -404,7 +436,7 @@ public class GamePlay : MonoBehaviour
                     }
             }
 
-            if (stepReached)
+            if (stepReached && !piecePlacedDown)
             {
                 bool placedDown;
 
@@ -413,17 +445,19 @@ public class GamePlay : MonoBehaviour
                 if (placedDown)
                 {
                     piecePlacedDown = true;
-                    return;
+                    placeDownTime = 0f; 
                 }
             }
 
             if (currentMove != null && currentMove.moveType == MoveType.left)
             {
+                piecePlacedDown = false;
                 newPieceValues = currentTetrisPiece.CalculateLeftPosition(currentPiece.xPosition, currentPiece.yPosition, array.GetLength(0), array.GetLength(1));
             }
 
             if (currentMove != null && currentMove.moveType == MoveType.right)
             {
+                piecePlacedDown = false; 
                 newPieceValues = currentTetrisPiece.CalculateRightPosition(currentPiece.xPosition, currentPiece.yPosition, array.GetLength(0), array.GetLength(1));
             }
 
@@ -455,6 +489,7 @@ public class GamePlay : MonoBehaviour
                     currentPiece.values = new int[4, 2];
                     Array.Copy(newPieceValues, currentPiece.values, newPieceValues.Length);
                     MoveInteractor();
+                    pieceDownAudio.Play();
                 }
                 else
                 {
@@ -468,7 +503,8 @@ public class GamePlay : MonoBehaviour
                     }
                     else
                     {
-                        piecePlacedDown = true; 
+                        piecePlacedDown = true;
+                        placeDownTime = 0f; 
                     }
                 }
             }
@@ -487,6 +523,7 @@ public class GamePlay : MonoBehaviour
 
             xLength = array.GetLength(0);
             yLength = array.GetLength(1);
+            Debug.Log(xLength);
 
             loadingText.SetActive(false);
             playButton.SetActive(true);
@@ -641,8 +678,63 @@ public class GamePlay : MonoBehaviour
         return (xPosition, yPosition); 
     }
 
+    //Get centre of each tetris piece type 
+    private string GetPieceIndicator()
+    {
+        string i = "I";
+        switch (currentPiece.pieceType)
+        {
+            case PieceType.IBlock1:
+            case PieceType.IBlock2:
+            case PieceType.IBlock3:
+            case PieceType.IBlock4:
+                i = "I";
+                break;
+            case PieceType.OBlock1:
+            case PieceType.OBlock2:
+            case PieceType.OBlock3:
+            case PieceType.OBlock4:
+                i = "O";
+                break;
+            case PieceType.TBlock1:
+            case PieceType.TBlock2:
+            case PieceType.TBlock3:
+            case PieceType.TBlock4:
+                i = "T";
+                break;
+            case PieceType.ZBlock1:
+            case PieceType.ZBlock2:
+            case PieceType.ZBlock3:
+            case PieceType.ZBlock4:
+                i = "Z";
+                break;
+            case PieceType.SBlock1:
+            case PieceType.SBlock2:
+            case PieceType.SBlock3:
+            case PieceType.SBlock4:
+                i = "S";
+                break;
+            case PieceType.LBlock1:
+            case PieceType.LBlock2:
+            case PieceType.LBlock3:
+            case PieceType.LBlock4:
+                i = "L";
+                break;
+            case PieceType.JBlock1:
+            case PieceType.JBlock2:
+            case PieceType.JBlock3:
+            case PieceType.JBlock4:
+                i = "J"; 
+                break;
+
+        }
+
+        return i;
+    }
+
     private void GameOver()
     {
+        gameOverAudio.Play();
         gameOver = true;
 
         OnPauseButtonPressed();
@@ -700,13 +792,13 @@ public class GamePlay : MonoBehaviour
         for (int i = 0; i < values.GetLength(0); i++)
         {
             if (values[i, 0] != -1 && values[i, 1] != -1)
-                FillBox(values[i, 0], values[i, 1], lockIt);
+                FillBox(values[i, 0], values[i, 1], lockIt, currentPiece.color);
         }
     }
 
-    private void FillBox(int x, int y, bool lockIt, bool dontChangeColour = false)
+    private void FillBox(int x, int y, bool lockIt, Color color)
     {
-        array[x, y].FillBox(currentPiece.color, lockIt, dontChangeColour);
+        array[x, y].FillBox(color, lockIt);
     }
 
     public void EmptyBox(int[,] values)
@@ -722,6 +814,11 @@ public class GamePlay : MonoBehaviour
     private void EmptyBox(int x, int y)
     {
         array[x, y].EmptyBox(); 
+    }
+
+    private Color GetBoxColor(int x, int y)
+    {
+        return array[x, y].GetColor();
     }
 
     private async Task<bool> SaveGameAsync()
@@ -807,6 +904,8 @@ public class GamePlay : MonoBehaviour
         loadingTextText.text = "Score " + score.ToString();
 
         interactor.gameObject.SetActive(true);
+
+        gameStartAudio.Play(); 
     }
 
     [ContextMenu("OnResumeButtonPressed")]
@@ -821,7 +920,7 @@ public class GamePlay : MonoBehaviour
                 if (savedGame.gameBlockProperties[i, j].locked)
                 {
                     Color color = new Color(savedGame.gameBlockProperties[i, j].color.r, savedGame.gameBlockProperties[i, j].color.g, savedGame.gameBlockProperties[i, j].color.b, savedGame.gameBlockProperties[i, j].color.a);
-                    array[i, j].FillBox(color, true, false);
+                    array[i, j].FillBox(color, true);
                 }
                 else
                 {

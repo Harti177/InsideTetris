@@ -41,10 +41,10 @@ public class GameBlock : MonoBehaviour
         return locked;
     }
 
-    public void FillBox(Color color, bool lockIt, bool dontChangeColour = false)
+    public void FillBox(Color color, bool lockIt)
     {
         GetComponent<MeshRenderer>().enabled = true;
-        if (!dontChangeColour) GetComponent<MeshRenderer>().material.color = color;
+        GetComponent<MeshRenderer>().material.color = color;
         //cue.SetActive(false); 
         locked = lockIt; 
     }
@@ -69,5 +69,10 @@ public class GameBlock : MonoBehaviour
         interactor.localPosition = Vector3.zero; 
         interactor.localRotation = Quaternion.identity;
         interactor.Rotate(0f, 90f, 0f, Space.Self);
+    }
+
+    public Color GetColor()
+    {
+        return GetComponent<MeshRenderer>().material.color; 
     }
 }

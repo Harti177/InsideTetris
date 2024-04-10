@@ -5362,8 +5362,8 @@ MonoBehaviour:
   _fistPoseName: fist
   _palmPoseName: palm
   _chopPoseName: chop
-  _minTimeBetweenHits: 0.5
-  _poseFrameTolerance: 9
+  _minTimeBetweenHits: 0.1
+  _poseFrameTolerance: 3
   onHit:
     m_PersistentCalls:
       m_Calls:

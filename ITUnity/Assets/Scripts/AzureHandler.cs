@@ -10,7 +10,9 @@ public class AzureHandler : MonoBehaviour
 {
     [SerializeField] private UserHandler userhandler;
 
-    string setUrl = "https://insidetetris.azurewebsites.net/api/SetHighScores?";
+    [SerializeField] private GameScore gameScore; 
+
+    string setUrl = "https://insidetetris.azurewebsites.net/api/SetHighScores?code=psHBbDVlmQBeIvfL5UXFWVaJ3vujMzPWzPrMXftNh5f0AzFuHJDVLw==";
     string getUrl = "https://insidetetris.azurewebsites.net/api/GetHighScores?code=rOd0WQSw5sOuE8E-O7HmkESbaSa4HZu2mgrltff169kEAzFu0I3wcg=="; 
 
     public IEnumerator SetUser(string userName, string userPassword)
@@ -101,7 +103,7 @@ public class AzureHandler : MonoBehaviour
 
                     if (setRequest.result != UnityWebRequest.Result.Success)
                     {
-                        
+                        gameScore.RefreshScoreList(); 
                     }
                     else
                     {

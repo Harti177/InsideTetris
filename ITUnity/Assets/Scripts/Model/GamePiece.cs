@@ -15,6 +15,8 @@ public class GamePiece
     public int[,] values;
     
     public Color color;
+
+    public bool seenByTheUser = false; 
 }
 
 public enum PieceType
