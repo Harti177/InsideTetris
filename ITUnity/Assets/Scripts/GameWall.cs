@@ -25,6 +25,8 @@ public class GameWall : MonoBehaviour
 
     [SerializeField] private GameObject sampleObject;
 
+    private GameObject floor; 
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -77,9 +79,19 @@ public class GameWall : MonoBehaviour
     public void CreateBricks(out GameBlock[,] array)
     {
         List<List<GameObject>> cubes = new List<List<GameObject>>();
+
+        List<Vector3> vertices = new List<Vector3>(); 
+        
         foreach (OVRScenePlane wall in _walls)
         {
             cubes.Add(wallCubes[wall]);
+
+            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            go.transform.parent = wall.transform;
+            go.transform.localScale = Vector3.one * 0.1f;
+            go.transform.localPosition = new Vector3(-wall.Dimensions.x / 2, -wall.Dimensions.y / 2, 0f);
+            vertices.Add(go.transform.position);
+            Destroy(go);
         }
 
         xLength = 0;
@@ -108,6 +120,8 @@ public class GameWall : MonoBehaviour
                 l += (cubes[i].Count / height);
             }
         }
+
+        floor = MeshGeneration.CreateMeshObject(vertices.ToArray());
     }
 
     public void CreateBricksSample(out GameBlock[,] array)
@@ -176,5 +190,15 @@ public class GameWall : MonoBehaviour
     public bool IsWallReady()
     {
         return initialised; 
+    }
+
+    public GameObject GetFloor()
+    {
+        return floor; 
+    }
+
+    public float GetWallHeight()
+    {
+        return _walls[0].Dimensions.y;
     }
 }

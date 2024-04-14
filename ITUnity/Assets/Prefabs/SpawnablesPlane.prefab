@@ -57,10 +57,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de33e9a16bf2ae46ad7fdf974f6800f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoomLightPrefab: {fileID: 4058753717224557943, guid: 9bf7839333215b74fa1228f857aab0d1, type: 3}
-  FallbackPrefab: {fileID: 0}
   SpawnablePrefabs:
   - ResizablePrefab: {fileID: 7329915652745048277, guid: 79ae8b5fe44dc184dac3e91b5f6360aa, type: 3}
     ClassificationLabel: WALL_FACE
     _editorClassificationIndex: 2
+  - ResizablePrefab: {fileID: 7329915652745048277, guid: 6accd661fc78e3149a106f6102abc758, type: 3}
+    ClassificationLabel: FLOOR
+    _editorClassificationIndex: 0
+  - ResizablePrefab: {fileID: 7329915652745048277, guid: b3caa5ab863d8ef4a9f9592a0f0b5257, type: 3}
+    ClassificationLabel: CEILING
+    _editorClassificationIndex: 1
   cubePrefab: {fileID: 2732340794593029115, guid: ddfa902e763961844a32d8622661ef83, type: 3}

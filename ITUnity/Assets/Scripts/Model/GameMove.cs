@@ -8,7 +8,9 @@ public class GameMove
 public enum MoveType
 {
     left,
+    leftten,
     right,
+    rightten,
     down,
     rotate
 }

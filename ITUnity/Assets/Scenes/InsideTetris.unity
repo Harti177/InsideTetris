@@ -386,7 +386,6 @@ GameObject:
   - component: {fileID: 16119362}
   - component: {fileID: 16119365}
   - component: {fileID: 16119364}
-  - component: {fileID: 16119363}
   - component: {fileID: 16119366}
   m_Layer: 0
   m_Name: Cube
@@ -410,27 +409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &16119363
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16119361}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &16119364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -495,6 +473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &24234027
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +586,6 @@ GameObject:
   - component: {fileID: 32783371}
   - component: {fileID: 32783374}
   - component: {fileID: 32783373}
-  - component: {fileID: 32783372}
   - component: {fileID: 32783375}
   m_Layer: 0
   m_Name: Cube (4)
@@ -630,27 +609,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &32783372
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32783370}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &32783373
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -715,6 +673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &36499077
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +686,6 @@ GameObject:
   - component: {fileID: 36499078}
   - component: {fileID: 36499081}
   - component: {fileID: 36499080}
-  - component: {fileID: 36499079}
   - component: {fileID: 36499082}
   m_Layer: 0
   m_Name: Cube (1)
@@ -750,27 +709,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &36499079
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36499077}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &36499080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -835,6 +773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &36966509
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +817,6 @@ GameObject:
   - component: {fileID: 48553274}
   - component: {fileID: 48553277}
   - component: {fileID: 48553276}
-  - component: {fileID: 48553275}
   - component: {fileID: 48553278}
   m_Layer: 0
   m_Name: Cube
@@ -901,27 +840,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &48553275
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48553273}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &48553276
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -986,6 +904,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &52527719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1214,6 @@ GameObject:
   - component: {fileID: 64580902}
   - component: {fileID: 64580905}
   - component: {fileID: 64580904}
-  - component: {fileID: 64580903}
   - component: {fileID: 64580906}
   m_Layer: 0
   m_Name: Cube (8)
@@ -1318,27 +1237,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &64580903
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64580901}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &64580904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1403,6 +1301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &96765273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1676,7 +1576,6 @@ GameObject:
   - component: {fileID: 103789048}
   - component: {fileID: 103789051}
   - component: {fileID: 103789050}
-  - component: {fileID: 103789049}
   - component: {fileID: 103789052}
   m_Layer: 0
   m_Name: Cube (9)
@@ -1700,27 +1599,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &103789049
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103789047}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &103789050
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1785,6 +1663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &106681762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1847,6 @@ GameObject:
   - component: {fileID: 110753067}
   - component: {fileID: 110753070}
   - component: {fileID: 110753069}
-  - component: {fileID: 110753068}
   - component: {fileID: 110753071}
   m_Layer: 0
   m_Name: Cube
@@ -1991,27 +1870,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &110753068
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110753066}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &110753069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2076,6 +1934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &122837519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +1947,6 @@ GameObject:
   - component: {fileID: 122837520}
   - component: {fileID: 122837523}
   - component: {fileID: 122837522}
-  - component: {fileID: 122837521}
   - component: {fileID: 122837524}
   m_Layer: 0
   m_Name: Cube (9)
@@ -2111,27 +1970,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &122837521
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122837519}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &122837522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2196,6 +2034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &128400780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2441,6 @@ GameObject:
   - component: {fileID: 133139527}
   - component: {fileID: 133139530}
   - component: {fileID: 133139529}
-  - component: {fileID: 133139528}
   - component: {fileID: 133139531}
   m_Layer: 0
   m_Name: Cube (3)
@@ -2625,27 +2464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &133139528
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133139526}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &133139529
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2710,6 +2528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &136944832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2541,6 @@ GameObject:
   - component: {fileID: 136944833}
   - component: {fileID: 136944836}
   - component: {fileID: 136944835}
-  - component: {fileID: 136944834}
   - component: {fileID: 136944837}
   m_Layer: 0
   m_Name: Cube (4)
@@ -2745,27 +2564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &136944834
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136944832}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &136944835
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2830,6 +2628,136 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
+--- !u!1 &137228785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 137228786}
+  - component: {fileID: 137228787}
+  m_Layer: 0
+  m_Name: LineSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &137228786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137228785}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1957390002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &137228787
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137228785}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &143192593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3616,7 +3544,6 @@ GameObject:
   - component: {fileID: 167444591}
   - component: {fileID: 167444594}
   - component: {fileID: 167444593}
-  - component: {fileID: 167444592}
   - component: {fileID: 167444595}
   m_Layer: 0
   m_Name: Cube (6)
@@ -3640,27 +3567,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &167444592
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167444590}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &167444593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3725,6 +3631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &168438524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3736,7 +3644,6 @@ GameObject:
   - component: {fileID: 168438525}
   - component: {fileID: 168438528}
   - component: {fileID: 168438527}
-  - component: {fileID: 168438526}
   - component: {fileID: 168438529}
   m_Layer: 0
   m_Name: Cube (5)
@@ -3760,27 +3667,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &168438526
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168438524}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &168438527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3845,6 +3731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &171054612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,7 +3744,6 @@ GameObject:
   - component: {fileID: 171054613}
   - component: {fileID: 171054616}
   - component: {fileID: 171054615}
-  - component: {fileID: 171054614}
   - component: {fileID: 171054617}
   m_Layer: 0
   m_Name: Cube (4)
@@ -3880,27 +3767,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &171054614
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171054612}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &171054615
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3965,6 +3831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &173180761
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,7 +3844,6 @@ GameObject:
   - component: {fileID: 173180762}
   - component: {fileID: 173180765}
   - component: {fileID: 173180764}
-  - component: {fileID: 173180763}
   - component: {fileID: 173180766}
   m_Layer: 0
   m_Name: Cube (8)
@@ -4000,27 +3867,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &173180763
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173180761}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &173180764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4085,6 +3931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &178977997
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,7 +4272,6 @@ GameObject:
   - component: {fileID: 185693501}
   - component: {fileID: 185693504}
   - component: {fileID: 185693503}
-  - component: {fileID: 185693502}
   - component: {fileID: 185693505}
   m_Layer: 0
   m_Name: Cube (8)
@@ -4448,27 +4295,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &185693502
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185693500}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &185693503
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4533,6 +4359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &203088518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,7 +4372,6 @@ GameObject:
   - component: {fileID: 203088519}
   - component: {fileID: 203088522}
   - component: {fileID: 203088521}
-  - component: {fileID: 203088520}
   - component: {fileID: 203088523}
   m_Layer: 0
   m_Name: Cube (3)
@@ -4568,27 +4395,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &203088520
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203088518}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &203088521
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4653,6 +4459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!4 &223974227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4658904325700070051, guid: 347797637f5237c40b239ea44fef63f1, type: 3}
@@ -5319,7 +5127,6 @@ GameObject:
   - component: {fileID: 243426711}
   - component: {fileID: 243426714}
   - component: {fileID: 243426713}
-  - component: {fileID: 243426712}
   - component: {fileID: 243426715}
   m_Layer: 0
   m_Name: Cube (4)
@@ -5343,27 +5150,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &243426712
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243426710}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &243426713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5428,6 +5214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &247361338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6199,7 +5987,6 @@ GameObject:
   - component: {fileID: 278154154}
   - component: {fileID: 278154157}
   - component: {fileID: 278154156}
-  - component: {fileID: 278154155}
   - component: {fileID: 278154158}
   m_Layer: 0
   m_Name: Cube (4)
@@ -6223,27 +6010,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &278154155
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278154153}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &278154156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6308,6 +6074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &278428233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6581,7 +6349,6 @@ GameObject:
   - component: {fileID: 285020782}
   - component: {fileID: 285020785}
   - component: {fileID: 285020784}
-  - component: {fileID: 285020783}
   - component: {fileID: 285020786}
   m_Layer: 0
   m_Name: Cube (3)
@@ -6605,27 +6372,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &285020783
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285020781}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &285020784
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6690,6 +6436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &287844739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,7 +6449,6 @@ GameObject:
   - component: {fileID: 287844740}
   - component: {fileID: 287844743}
   - component: {fileID: 287844742}
-  - component: {fileID: 287844741}
   - component: {fileID: 287844744}
   m_Layer: 0
   m_Name: Cube (1)
@@ -6725,27 +6472,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &287844741
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287844739}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &287844742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6810,6 +6536,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &299049729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8219,6 +7947,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &365083672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365083674}
+  - component: {fileID: 365083673}
+  m_Layer: 0
+  m_Name: PostProcessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &365083673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365083672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: cd39dc7b5800d9e479fa284b38b63892, type: 2}
+--- !u!4 &365083674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365083672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366907186
 GameObject:
   m_ObjectHideFlags: 0
@@ -8482,7 +8259,6 @@ GameObject:
   - component: {fileID: 380623779}
   - component: {fileID: 380623782}
   - component: {fileID: 380623781}
-  - component: {fileID: 380623780}
   - component: {fileID: 380623783}
   m_Layer: 0
   m_Name: Cube (6)
@@ -8506,27 +8282,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &380623780
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380623778}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &380623781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8591,6 +8346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &381806334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8864,7 +8621,6 @@ GameObject:
   - component: {fileID: 390293232}
   - component: {fileID: 390293235}
   - component: {fileID: 390293234}
-  - component: {fileID: 390293233}
   - component: {fileID: 390293236}
   m_Layer: 0
   m_Name: Cube (8)
@@ -8888,27 +8644,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &390293233
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390293231}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &390293234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8973,6 +8708,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &400235214
 GameObject:
   m_ObjectHideFlags: 0
@@ -9462,7 +9199,6 @@ GameObject:
   - component: {fileID: 413031158}
   - component: {fileID: 413031161}
   - component: {fileID: 413031160}
-  - component: {fileID: 413031159}
   - component: {fileID: 413031162}
   m_Layer: 0
   m_Name: Cube (6)
@@ -9486,27 +9222,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &413031159
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413031157}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &413031160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9571,6 +9286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &421447491
 GameObject:
   m_ObjectHideFlags: 0
@@ -9976,7 +9693,6 @@ GameObject:
   - component: {fileID: 425117655}
   - component: {fileID: 425117658}
   - component: {fileID: 425117657}
-  - component: {fileID: 425117656}
   - component: {fileID: 425117659}
   m_Layer: 0
   m_Name: Cube (6)
@@ -10000,27 +9716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &425117656
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425117654}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &425117657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10085,6 +9780,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &425952349
 GameObject:
   m_ObjectHideFlags: 0
@@ -10791,7 +10488,6 @@ GameObject:
   - component: {fileID: 457064004}
   - component: {fileID: 457064007}
   - component: {fileID: 457064006}
-  - component: {fileID: 457064005}
   - component: {fileID: 457064008}
   m_Layer: 0
   m_Name: Cube (3)
@@ -10815,27 +10511,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &457064005
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457064003}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &457064006
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10900,6 +10575,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &459949286
 GameObject:
   m_ObjectHideFlags: 0
@@ -14467,7 +14144,6 @@ GameObject:
   - component: {fileID: 538644004}
   - component: {fileID: 538644007}
   - component: {fileID: 538644006}
-  - component: {fileID: 538644005}
   - component: {fileID: 538644008}
   m_Layer: 0
   m_Name: Cube (5)
@@ -14491,27 +14167,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &538644005
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538644003}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &538644006
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14576,6 +14231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!4 &540295077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4869577802921675287, guid: ea16c3c8c1688234fa81a4f39339bf1b, type: 3}
@@ -15261,7 +14918,6 @@ GameObject:
   - component: {fileID: 574646865}
   - component: {fileID: 574646868}
   - component: {fileID: 574646867}
-  - component: {fileID: 574646866}
   - component: {fileID: 574646869}
   m_Layer: 0
   m_Name: Cube (7)
@@ -15285,27 +14941,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &574646866
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574646864}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &574646867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15370,6 +15005,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &581576175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15953,11 +15590,16 @@ MonoBehaviour:
   loadingTextText: {fileID: 2011414668}
   saveScoreTextText: {fileID: 1543025423}
   highScoresText: {fileID: 1546144350}
+  piecesLeftToSolvePuzzleText: {fileID: 1785089992}
+  piecesLeftToSolvePuzzleTextText: {fileID: 1785089993}
   gameStartAudio: {fileID: 467410899}
   gameOverAudio: {fileID: 1896204391}
   pieceDownAudio: {fileID: 974388742}
   piecePlacedAudio: {fileID: 307215083}
+  lineAudio: {fileID: 137228787}
   gameBackgroundAudio: {fileID: 1793071743}
+  floorMaterial: {fileID: 2100000, guid: b8818067bc7f8d94590237e675d8e927, type: 2}
+  ceilingMaterial: {fileID: 2100000, guid: a125ed1230d7492409e841dfa7c49a77, type: 2}
   interactor: {fileID: 2518151908303615413}
   indicator: {fileID: 4239356712653786885}
   useSample: 0
@@ -16333,7 +15975,6 @@ GameObject:
   - component: {fileID: 613927362}
   - component: {fileID: 613927365}
   - component: {fileID: 613927364}
-  - component: {fileID: 613927363}
   - component: {fileID: 613927366}
   m_Layer: 0
   m_Name: Cube (3)
@@ -16357,27 +15998,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &613927363
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613927361}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &613927364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16442,6 +16062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &617036318
 GameObject:
   m_ObjectHideFlags: 0
@@ -16928,7 +16550,6 @@ GameObject:
   - component: {fileID: 645660867}
   - component: {fileID: 645660870}
   - component: {fileID: 645660869}
-  - component: {fileID: 645660868}
   - component: {fileID: 645660871}
   m_Layer: 0
   m_Name: Cube (1)
@@ -16952,27 +16573,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &645660868
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645660866}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &645660869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17037,6 +16637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &655788326
 GameObject:
   m_ObjectHideFlags: 0
@@ -17048,7 +16650,6 @@ GameObject:
   - component: {fileID: 655788327}
   - component: {fileID: 655788330}
   - component: {fileID: 655788329}
-  - component: {fileID: 655788328}
   - component: {fileID: 655788331}
   m_Layer: 0
   m_Name: Cube (4)
@@ -17072,27 +16673,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &655788328
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655788326}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &655788329
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17157,6 +16737,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &661561436
 GameObject:
   m_ObjectHideFlags: 0
@@ -18434,7 +18016,6 @@ GameObject:
   - component: {fileID: 689595776}
   - component: {fileID: 689595779}
   - component: {fileID: 689595778}
-  - component: {fileID: 689595777}
   - component: {fileID: 689595780}
   m_Layer: 0
   m_Name: Cube (3)
@@ -18458,27 +18039,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &689595777
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689595775}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &689595778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18543,6 +18103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &690844560
 GameObject:
   m_ObjectHideFlags: 0
@@ -19437,7 +18999,6 @@ GameObject:
   - component: {fileID: 705976634}
   - component: {fileID: 705976637}
   - component: {fileID: 705976636}
-  - component: {fileID: 705976635}
   - component: {fileID: 705976638}
   m_Layer: 0
   m_Name: Cube (1)
@@ -19461,27 +19022,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &705976635
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705976633}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &705976636
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19546,6 +19086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &709415607
 GameObject:
   m_ObjectHideFlags: 0
@@ -19923,7 +19465,6 @@ GameObject:
   - component: {fileID: 722872432}
   - component: {fileID: 722872435}
   - component: {fileID: 722872434}
-  - component: {fileID: 722872433}
   - component: {fileID: 722872436}
   m_Layer: 0
   m_Name: Cube (7)
@@ -19947,27 +19488,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &722872433
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722872431}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &722872434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20032,6 +19552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &732195956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20528,7 +20050,6 @@ GameObject:
   - component: {fileID: 736080992}
   - component: {fileID: 736080995}
   - component: {fileID: 736080994}
-  - component: {fileID: 736080993}
   - component: {fileID: 736080996}
   m_Layer: 0
   m_Name: Cube (7)
@@ -20552,27 +20073,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &736080993
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736080991}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &736080994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20637,6 +20137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &737081002
 GameObject:
   m_ObjectHideFlags: 0
@@ -20648,7 +20150,6 @@ GameObject:
   - component: {fileID: 737081003}
   - component: {fileID: 737081006}
   - component: {fileID: 737081005}
-  - component: {fileID: 737081004}
   - component: {fileID: 737081007}
   m_Layer: 0
   m_Name: Cube (5)
@@ -20672,27 +20173,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &737081004
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737081002}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &737081005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20757,6 +20237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &739801144
 GameObject:
   m_ObjectHideFlags: 0
@@ -20990,7 +20472,6 @@ GameObject:
   - component: {fileID: 750266956}
   - component: {fileID: 750266959}
   - component: {fileID: 750266958}
-  - component: {fileID: 750266957}
   - component: {fileID: 750266960}
   m_Layer: 0
   m_Name: Cube (6)
@@ -21014,27 +20495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &750266957
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750266955}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &750266958
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21099,6 +20559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &756163196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22247,7 +21709,6 @@ GameObject:
   - component: {fileID: 799573973}
   - component: {fileID: 799573976}
   - component: {fileID: 799573975}
-  - component: {fileID: 799573974}
   - component: {fileID: 799573977}
   m_Layer: 0
   m_Name: Cube
@@ -22271,27 +21732,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &799573974
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799573972}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &799573975
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22356,6 +21796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &810684016
 GameObject:
   m_ObjectHideFlags: 0
@@ -23041,7 +22483,6 @@ GameObject:
   - component: {fileID: 836871491}
   - component: {fileID: 836871494}
   - component: {fileID: 836871493}
-  - component: {fileID: 836871492}
   - component: {fileID: 836871495}
   m_Layer: 0
   m_Name: Cube (7)
@@ -23065,27 +22506,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &836871492
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836871490}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &836871493
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23150,6 +22570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &838663817
 GameObject:
   m_ObjectHideFlags: 0
@@ -23287,7 +22709,6 @@ GameObject:
   - component: {fileID: 847194261}
   - component: {fileID: 847194264}
   - component: {fileID: 847194263}
-  - component: {fileID: 847194262}
   - component: {fileID: 847194265}
   m_Layer: 0
   m_Name: Cube (4)
@@ -23311,27 +22732,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &847194262
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847194260}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &847194263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23396,6 +22796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &856790132
 GameObject:
   m_ObjectHideFlags: 0
@@ -24361,6 +23763,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2011414667}
+  - {fileID: 1785089995}
   - {fileID: 1543025422}
   - {fileID: 143192594}
   - {fileID: 581576176}
@@ -24402,7 +23805,6 @@ GameObject:
   - component: {fileID: 869899101}
   - component: {fileID: 869899104}
   - component: {fileID: 869899103}
-  - component: {fileID: 869899102}
   - component: {fileID: 869899105}
   m_Layer: 0
   m_Name: Cube (5)
@@ -24426,27 +23828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &869899102
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869899100}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &869899103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24511,6 +23892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &871578314
 GameObject:
   m_ObjectHideFlags: 0
@@ -24522,7 +23905,6 @@ GameObject:
   - component: {fileID: 871578315}
   - component: {fileID: 871578318}
   - component: {fileID: 871578317}
-  - component: {fileID: 871578316}
   - component: {fileID: 871578319}
   m_Layer: 0
   m_Name: Cube (9)
@@ -24546,27 +23928,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &871578316
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871578314}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &871578317
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24631,6 +23992,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &872044796
 GameObject:
   m_ObjectHideFlags: 0
@@ -25110,7 +24473,6 @@ GameObject:
   - component: {fileID: 880353926}
   - component: {fileID: 880353929}
   - component: {fileID: 880353928}
-  - component: {fileID: 880353927}
   - component: {fileID: 880353930}
   m_Layer: 0
   m_Name: Cube (2)
@@ -25134,27 +24496,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &880353927
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880353925}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &880353928
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25219,6 +24560,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &883616056
 GameObject:
   m_ObjectHideFlags: 0
@@ -25401,7 +24744,6 @@ GameObject:
   - component: {fileID: 883844738}
   - component: {fileID: 883844741}
   - component: {fileID: 883844740}
-  - component: {fileID: 883844739}
   - component: {fileID: 883844742}
   m_Layer: 0
   m_Name: Cube (1)
@@ -25425,27 +24767,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &883844739
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883844737}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &883844740
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25510,6 +24831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &895622253
 GameObject:
   m_ObjectHideFlags: 0
@@ -25844,7 +25167,6 @@ GameObject:
   - component: {fileID: 905353762}
   - component: {fileID: 905353765}
   - component: {fileID: 905353764}
-  - component: {fileID: 905353763}
   - component: {fileID: 905353766}
   m_Layer: 0
   m_Name: Cube (8)
@@ -25868,27 +25190,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &905353763
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905353761}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &905353764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25953,6 +25254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &916691155
 GameObject:
   m_ObjectHideFlags: 0
@@ -25964,7 +25267,6 @@ GameObject:
   - component: {fileID: 916691156}
   - component: {fileID: 916691159}
   - component: {fileID: 916691158}
-  - component: {fileID: 916691157}
   - component: {fileID: 916691160}
   m_Layer: 0
   m_Name: Cube (6)
@@ -25988,27 +25290,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &916691157
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916691155}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &916691158
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26073,6 +25354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &921075008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26395,7 +25678,6 @@ GameObject:
   - component: {fileID: 925316921}
   - component: {fileID: 925316924}
   - component: {fileID: 925316923}
-  - component: {fileID: 925316922}
   - component: {fileID: 925316925}
   m_Layer: 0
   m_Name: Cube
@@ -26419,27 +25701,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &925316922
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925316920}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &925316923
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26504,6 +25765,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &929525274
 GameObject:
   m_ObjectHideFlags: 0
@@ -27349,7 +26612,6 @@ GameObject:
   - component: {fileID: 951956952}
   - component: {fileID: 951956955}
   - component: {fileID: 951956954}
-  - component: {fileID: 951956953}
   - component: {fileID: 951956956}
   m_Layer: 0
   m_Name: Cube (2)
@@ -27373,27 +26635,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &951956953
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951956951}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &951956954
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27458,6 +26699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &955129066
 GameObject:
   m_ObjectHideFlags: 0
@@ -27469,7 +26712,6 @@ GameObject:
   - component: {fileID: 955129067}
   - component: {fileID: 955129070}
   - component: {fileID: 955129069}
-  - component: {fileID: 955129068}
   - component: {fileID: 955129071}
   m_Layer: 0
   m_Name: Cube (7)
@@ -27493,27 +26735,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &955129068
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955129066}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &955129069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27578,6 +26799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &957525280
 GameObject:
   m_ObjectHideFlags: 0
@@ -27589,7 +26812,6 @@ GameObject:
   - component: {fileID: 957525281}
   - component: {fileID: 957525284}
   - component: {fileID: 957525283}
-  - component: {fileID: 957525282}
   - component: {fileID: 957525285}
   m_Layer: 0
   m_Name: Cube (1)
@@ -27613,27 +26835,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &957525282
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957525280}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &957525283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27698,6 +26899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &958129505
 GameObject:
   m_ObjectHideFlags: 0
@@ -27880,7 +27083,6 @@ GameObject:
   - component: {fileID: 959770317}
   - component: {fileID: 959770320}
   - component: {fileID: 959770319}
-  - component: {fileID: 959770318}
   - component: {fileID: 959770321}
   m_Layer: 0
   m_Name: Cube (8)
@@ -27904,27 +27106,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &959770318
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959770316}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &959770319
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27989,6 +27170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &962128393
 GameObject:
   m_ObjectHideFlags: 0
@@ -30231,7 +29414,6 @@ GameObject:
   - component: {fileID: 1013194928}
   - component: {fileID: 1013194931}
   - component: {fileID: 1013194930}
-  - component: {fileID: 1013194929}
   - component: {fileID: 1013194932}
   m_Layer: 0
   m_Name: Cube
@@ -30255,27 +29437,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1013194929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013194927}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1013194930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30340,6 +29501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1014414533
 GameObject:
   m_ObjectHideFlags: 0
@@ -30700,7 +29863,6 @@ GameObject:
   - component: {fileID: 1018643792}
   - component: {fileID: 1018643795}
   - component: {fileID: 1018643794}
-  - component: {fileID: 1018643793}
   - component: {fileID: 1018643796}
   m_Layer: 0
   m_Name: Cube (7)
@@ -30724,27 +29886,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1018643793
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018643791}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1018643794
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30809,6 +29950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!114 &1023992720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33251,7 +32394,6 @@ GameObject:
   - component: {fileID: 1064422066}
   - component: {fileID: 1064422069}
   - component: {fileID: 1064422068}
-  - component: {fileID: 1064422067}
   - component: {fileID: 1064422070}
   m_Layer: 0
   m_Name: Cube (6)
@@ -33275,27 +32417,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1064422067
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064422065}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1064422068
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33360,6 +32481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &1065606993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34043,7 +33166,6 @@ GameObject:
   - component: {fileID: 1088221858}
   - component: {fileID: 1088221861}
   - component: {fileID: 1088221860}
-  - component: {fileID: 1088221859}
   - component: {fileID: 1088221862}
   m_Layer: 0
   m_Name: Cube (8)
@@ -34067,27 +33189,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1088221859
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088221857}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1088221860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34152,6 +33253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1089396097
 GameObject:
   m_ObjectHideFlags: 0
@@ -34163,7 +33266,6 @@ GameObject:
   - component: {fileID: 1089396098}
   - component: {fileID: 1089396101}
   - component: {fileID: 1089396100}
-  - component: {fileID: 1089396099}
   - component: {fileID: 1089396102}
   m_Layer: 0
   m_Name: Cube (9)
@@ -34187,27 +33289,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1089396099
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089396097}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1089396100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34272,6 +33353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1090574645
 GameObject:
   m_ObjectHideFlags: 0
@@ -34283,7 +33366,6 @@ GameObject:
   - component: {fileID: 1090574646}
   - component: {fileID: 1090574649}
   - component: {fileID: 1090574648}
-  - component: {fileID: 1090574647}
   - component: {fileID: 1090574650}
   m_Layer: 0
   m_Name: Cube (2)
@@ -34307,27 +33389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1090574647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090574645}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1090574648
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34392,6 +33453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1095607318
 GameObject:
   m_ObjectHideFlags: 0
@@ -35550,7 +34613,6 @@ GameObject:
   - component: {fileID: 1148334901}
   - component: {fileID: 1148334904}
   - component: {fileID: 1148334903}
-  - component: {fileID: 1148334902}
   - component: {fileID: 1148334905}
   m_Layer: 0
   m_Name: Cube (9)
@@ -35574,27 +34636,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1148334902
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148334900}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1148334903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35659,6 +34700,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1150615162
 GameObject:
   m_ObjectHideFlags: 0
@@ -35670,7 +34713,6 @@ GameObject:
   - component: {fileID: 1150615163}
   - component: {fileID: 1150615166}
   - component: {fileID: 1150615165}
-  - component: {fileID: 1150615164}
   - component: {fileID: 1150615167}
   m_Layer: 0
   m_Name: Cube (5)
@@ -35694,27 +34736,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1150615164
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150615162}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1150615165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35779,6 +34800,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &1151331139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36864,7 +35887,6 @@ GameObject:
   - component: {fileID: 1165552717}
   - component: {fileID: 1165552720}
   - component: {fileID: 1165552719}
-  - component: {fileID: 1165552718}
   - component: {fileID: 1165552721}
   m_Layer: 0
   m_Name: Cube (7)
@@ -36888,27 +35910,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1165552718
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165552716}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1165552719
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36973,6 +35974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!114 &1172449534 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1310353134208623885, guid: b16977a4ff9e3ca4f80fe317580fe3cd, type: 3}
@@ -37016,7 +36019,6 @@ GameObject:
   - component: {fileID: 1186949289}
   - component: {fileID: 1186949292}
   - component: {fileID: 1186949291}
-  - component: {fileID: 1186949290}
   - component: {fileID: 1186949293}
   m_Layer: 0
   m_Name: Cube (3)
@@ -37040,27 +36042,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1186949290
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186949288}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1186949291
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37125,6 +36106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1190828073
 GameObject:
   m_ObjectHideFlags: 0
@@ -37136,7 +36119,6 @@ GameObject:
   - component: {fileID: 1190828074}
   - component: {fileID: 1190828077}
   - component: {fileID: 1190828076}
-  - component: {fileID: 1190828075}
   - component: {fileID: 1190828078}
   m_Layer: 0
   m_Name: Cube (5)
@@ -37160,27 +36142,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1190828075
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190828073}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1190828076
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37245,6 +36206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &1197437599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37518,7 +36481,6 @@ GameObject:
   - component: {fileID: 1199439101}
   - component: {fileID: 1199439104}
   - component: {fileID: 1199439103}
-  - component: {fileID: 1199439102}
   - component: {fileID: 1199439105}
   m_Layer: 0
   m_Name: Cube (8)
@@ -37542,27 +36504,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1199439102
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199439100}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1199439103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37627,6 +36568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1226013259
 GameObject:
   m_ObjectHideFlags: 0
@@ -38456,7 +37399,6 @@ GameObject:
   - component: {fileID: 1256036658}
   - component: {fileID: 1256036661}
   - component: {fileID: 1256036660}
-  - component: {fileID: 1256036659}
   - component: {fileID: 1256036662}
   m_Layer: 0
   m_Name: Cube (9)
@@ -38480,27 +37422,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1256036659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256036657}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1256036660
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38565,6 +37486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1265248734
 GameObject:
   m_ObjectHideFlags: 0
@@ -38799,7 +37722,6 @@ GameObject:
   - component: {fileID: 1266536466}
   - component: {fileID: 1266536469}
   - component: {fileID: 1266536468}
-  - component: {fileID: 1266536467}
   - component: {fileID: 1266536470}
   m_Layer: 0
   m_Name: Cube (5)
@@ -38823,27 +37745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1266536467
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266536465}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1266536468
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38908,6 +37809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1267031085
 GameObject:
   m_ObjectHideFlags: 0
@@ -38919,7 +37822,6 @@ GameObject:
   - component: {fileID: 1267031086}
   - component: {fileID: 1267031089}
   - component: {fileID: 1267031088}
-  - component: {fileID: 1267031087}
   - component: {fileID: 1267031090}
   m_Layer: 0
   m_Name: Cube (1)
@@ -38943,27 +37845,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1267031087
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267031085}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1267031088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39028,6 +37909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1275019750
 GameObject:
   m_ObjectHideFlags: 0
@@ -39558,7 +38441,6 @@ GameObject:
   - component: {fileID: 1303371067}
   - component: {fileID: 1303371070}
   - component: {fileID: 1303371069}
-  - component: {fileID: 1303371068}
   - component: {fileID: 1303371071}
   m_Layer: 0
   m_Name: Cube (2)
@@ -39582,27 +38464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1303371068
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303371066}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1303371069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39667,6 +38528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1312924236
 GameObject:
   m_ObjectHideFlags: 0
@@ -40283,7 +39146,6 @@ GameObject:
   - component: {fileID: 1378816197}
   - component: {fileID: 1378816200}
   - component: {fileID: 1378816199}
-  - component: {fileID: 1378816198}
   - component: {fileID: 1378816201}
   m_Layer: 0
   m_Name: Cube
@@ -40307,27 +39169,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1378816198
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378816196}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1378816199
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -40392,6 +39233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1389059822
 GameObject:
   m_ObjectHideFlags: 0
@@ -40833,7 +39676,6 @@ GameObject:
   - component: {fileID: 1425327280}
   - component: {fileID: 1425327283}
   - component: {fileID: 1425327282}
-  - component: {fileID: 1425327281}
   - component: {fileID: 1425327284}
   m_Layer: 0
   m_Name: Cube (2)
@@ -40857,27 +39699,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1425327281
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425327279}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1425327282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -40942,6 +39763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1429765376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
@@ -41128,7 +39951,6 @@ GameObject:
   - component: {fileID: 1462379825}
   - component: {fileID: 1462379828}
   - component: {fileID: 1462379827}
-  - component: {fileID: 1462379826}
   - component: {fileID: 1462379829}
   m_Layer: 0
   m_Name: Cube (2)
@@ -41152,27 +39974,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1462379826
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462379824}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1462379827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41237,6 +40038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1463558154
 GameObject:
   m_ObjectHideFlags: 0
@@ -42399,7 +41202,6 @@ GameObject:
   - component: {fileID: 1504613242}
   - component: {fileID: 1504613245}
   - component: {fileID: 1504613244}
-  - component: {fileID: 1504613243}
   - component: {fileID: 1504613246}
   m_Layer: 0
   m_Name: Cube (6)
@@ -42423,27 +41225,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1504613243
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504613241}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1504613244
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42508,6 +41289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1506543892
 GameObject:
   m_ObjectHideFlags: 0
@@ -42519,7 +41302,6 @@ GameObject:
   - component: {fileID: 1506543893}
   - component: {fileID: 1506543896}
   - component: {fileID: 1506543895}
-  - component: {fileID: 1506543894}
   - component: {fileID: 1506543897}
   m_Layer: 0
   m_Name: Cube (3)
@@ -42543,27 +41325,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1506543894
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506543892}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1506543895
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42628,6 +41389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1513553555
 GameObject:
   m_ObjectHideFlags: 0
@@ -42765,7 +41528,6 @@ GameObject:
   - component: {fileID: 1514683051}
   - component: {fileID: 1514683054}
   - component: {fileID: 1514683053}
-  - component: {fileID: 1514683052}
   - component: {fileID: 1514683055}
   m_Layer: 0
   m_Name: Cube (4)
@@ -42789,27 +41551,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1514683052
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514683050}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1514683053
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42874,6 +41615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1518409580
 GameObject:
   m_ObjectHideFlags: 0
@@ -43108,7 +41851,6 @@ GameObject:
   - component: {fileID: 1521340117}
   - component: {fileID: 1521340120}
   - component: {fileID: 1521340119}
-  - component: {fileID: 1521340118}
   - component: {fileID: 1521340121}
   m_Layer: 0
   m_Name: Cube
@@ -43132,27 +41874,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1521340118
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521340116}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1521340119
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43217,6 +41938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1524591924
 GameObject:
   m_ObjectHideFlags: 0
@@ -44570,7 +43293,6 @@ GameObject:
   - component: {fileID: 1575877742}
   - component: {fileID: 1575877745}
   - component: {fileID: 1575877744}
-  - component: {fileID: 1575877743}
   - component: {fileID: 1575877746}
   m_Layer: 0
   m_Name: Cube (1)
@@ -44594,27 +43316,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1575877743
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575877741}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1575877744
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44679,6 +43380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1592421345
 GameObject:
   m_ObjectHideFlags: 0
@@ -44690,7 +43393,6 @@ GameObject:
   - component: {fileID: 1592421346}
   - component: {fileID: 1592421349}
   - component: {fileID: 1592421348}
-  - component: {fileID: 1592421347}
   - component: {fileID: 1592421350}
   m_Layer: 0
   m_Name: Cube (6)
@@ -44714,27 +43416,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1592421347
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592421345}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1592421348
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44799,6 +43480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1594240507
 GameObject:
   m_ObjectHideFlags: 0
@@ -45033,7 +43716,6 @@ GameObject:
   - component: {fileID: 1601592741}
   - component: {fileID: 1601592744}
   - component: {fileID: 1601592743}
-  - component: {fileID: 1601592742}
   - component: {fileID: 1601592745}
   m_Layer: 0
   m_Name: Cube (9)
@@ -45057,27 +43739,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1601592742
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601592740}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1601592743
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45142,6 +43803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1610222223
 GameObject:
   m_ObjectHideFlags: 0
@@ -45778,7 +44441,6 @@ GameObject:
   - component: {fileID: 1622654735}
   - component: {fileID: 1622654738}
   - component: {fileID: 1622654737}
-  - component: {fileID: 1622654736}
   - component: {fileID: 1622654739}
   m_Layer: 0
   m_Name: Cube (3)
@@ -45802,27 +44464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1622654736
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622654734}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1622654737
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45887,6 +44528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1624557172
 GameObject:
   m_ObjectHideFlags: 0
@@ -45898,7 +44541,6 @@ GameObject:
   - component: {fileID: 1624557173}
   - component: {fileID: 1624557176}
   - component: {fileID: 1624557175}
-  - component: {fileID: 1624557174}
   - component: {fileID: 1624557177}
   m_Layer: 0
   m_Name: Cube (1)
@@ -45922,27 +44564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1624557174
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624557172}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1624557175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46007,6 +44628,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!114 &1624720162 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3919617524753752244, guid: 1165bf810236c0542811616e1fbd0a1c, type: 3}
@@ -47286,7 +45909,6 @@ GameObject:
   - component: {fileID: 1671296673}
   - component: {fileID: 1671296676}
   - component: {fileID: 1671296675}
-  - component: {fileID: 1671296674}
   - component: {fileID: 1671296677}
   m_Layer: 0
   m_Name: Cube (5)
@@ -47310,27 +45932,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1671296674
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671296672}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1671296675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47395,6 +45996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1674244764
 GameObject:
   m_ObjectHideFlags: 0
@@ -48104,7 +46707,6 @@ GameObject:
   - component: {fileID: 1723817749}
   - component: {fileID: 1723817752}
   - component: {fileID: 1723817751}
-  - component: {fileID: 1723817750}
   - component: {fileID: 1723817753}
   m_Layer: 0
   m_Name: Cube (3)
@@ -48128,27 +46730,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1723817750
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723817748}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1723817751
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48213,6 +46794,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1728956624
 GameObject:
   m_ObjectHideFlags: 0
@@ -49381,6 +47964,177 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781522526}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1785089992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785089995}
+  - component: {fileID: 1785089994}
+  - component: {fileID: 1785089993}
+  m_Layer: 0
+  m_Name: PiecesLeftText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1785089993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785089992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
+  m_sharedMaterial: {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1785089994}
+  m_maskType: 0
+--- !u!23 &1785089994
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785089992}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!224 &1785089995
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785089992}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.015000001}
+  m_LocalScale: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 869765907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.0296}
+  m_SizeDelta: {x: 120, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1785865478
 GameObject:
   m_ObjectHideFlags: 0
@@ -49563,7 +48317,6 @@ GameObject:
   - component: {fileID: 1792216123}
   - component: {fileID: 1792216126}
   - component: {fileID: 1792216125}
-  - component: {fileID: 1792216124}
   - component: {fileID: 1792216127}
   m_Layer: 0
   m_Name: Cube (9)
@@ -49587,27 +48340,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1792216124
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792216122}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1792216125
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49672,6 +48404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1793071742
 GameObject:
   m_ObjectHideFlags: 0
@@ -49811,7 +48545,6 @@ GameObject:
   - component: {fileID: 1812139390}
   - component: {fileID: 1812139393}
   - component: {fileID: 1812139392}
-  - component: {fileID: 1812139391}
   - component: {fileID: 1812139394}
   m_Layer: 0
   m_Name: Cube (8)
@@ -49835,27 +48568,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1812139391
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812139389}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1812139392
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49920,6 +48632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1812675639
 GameObject:
   m_ObjectHideFlags: 0
@@ -49931,7 +48645,6 @@ GameObject:
   - component: {fileID: 1812675640}
   - component: {fileID: 1812675643}
   - component: {fileID: 1812675642}
-  - component: {fileID: 1812675641}
   - component: {fileID: 1812675644}
   m_Layer: 0
   m_Name: Cube (7)
@@ -49955,27 +48668,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1812675641
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812675639}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1812675642
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50040,6 +48732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1813215781
 GameObject:
   m_ObjectHideFlags: 0
@@ -50051,7 +48745,6 @@ GameObject:
   - component: {fileID: 1813215782}
   - component: {fileID: 1813215785}
   - component: {fileID: 1813215784}
-  - component: {fileID: 1813215783}
   - component: {fileID: 1813215786}
   m_Layer: 0
   m_Name: Cube (4)
@@ -50075,27 +48768,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1813215783
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813215781}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1813215784
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50160,6 +48832,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1813313954
 GameObject:
   m_ObjectHideFlags: 0
@@ -50394,7 +49068,6 @@ GameObject:
   - component: {fileID: 1817612782}
   - component: {fileID: 1817612785}
   - component: {fileID: 1817612784}
-  - component: {fileID: 1817612783}
   - component: {fileID: 1817612786}
   m_Layer: 0
   m_Name: Cube (4)
@@ -50418,27 +49091,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1817612783
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817612781}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1817612784
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50503,6 +49155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1819284908
 GameObject:
   m_ObjectHideFlags: 0
@@ -50514,7 +49168,6 @@ GameObject:
   - component: {fileID: 1819284909}
   - component: {fileID: 1819284912}
   - component: {fileID: 1819284911}
-  - component: {fileID: 1819284910}
   - component: {fileID: 1819284913}
   m_Layer: 0
   m_Name: Cube (2)
@@ -50538,27 +49191,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1819284910
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819284908}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1819284911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50623,6 +49255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1820558036
 GameObject:
   m_ObjectHideFlags: 0
@@ -51141,7 +49775,6 @@ GameObject:
   - component: {fileID: 1827859849}
   - component: {fileID: 1827859852}
   - component: {fileID: 1827859851}
-  - component: {fileID: 1827859850}
   - component: {fileID: 1827859853}
   m_Layer: 0
   m_Name: Cube (9)
@@ -51165,27 +49798,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1827859850
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827859848}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1827859851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51250,6 +49862,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!4 &1828601336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4658904325700070051, guid: 4b2ec9cc45d57c047b74113a934b6887, type: 3}
@@ -51448,7 +50062,6 @@ GameObject:
   - component: {fileID: 1833711549}
   - component: {fileID: 1833711552}
   - component: {fileID: 1833711551}
-  - component: {fileID: 1833711550}
   - component: {fileID: 1833711553}
   m_Layer: 0
   m_Name: Cube (2)
@@ -51472,27 +50085,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1833711550
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833711548}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1833711551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51557,6 +50149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1843643185
 GameObject:
   m_ObjectHideFlags: 0
@@ -51568,7 +50162,6 @@ GameObject:
   - component: {fileID: 1843643186}
   - component: {fileID: 1843643189}
   - component: {fileID: 1843643188}
-  - component: {fileID: 1843643187}
   - component: {fileID: 1843643190}
   m_Layer: 0
   m_Name: Cube (8)
@@ -51592,27 +50185,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1843643187
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843643185}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1843643188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51677,6 +50249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1844195204
 GameObject:
   m_ObjectHideFlags: 0
@@ -52258,7 +50832,6 @@ GameObject:
   - component: {fileID: 1870363928}
   - component: {fileID: 1870363931}
   - component: {fileID: 1870363930}
-  - component: {fileID: 1870363929}
   - component: {fileID: 1870363932}
   m_Layer: 0
   m_Name: Cube (6)
@@ -52282,27 +50855,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1870363929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870363927}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1870363930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52367,6 +50919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1877530625
 GameObject:
   m_ObjectHideFlags: 0
@@ -52378,7 +50932,6 @@ GameObject:
   - component: {fileID: 1877530626}
   - component: {fileID: 1877530629}
   - component: {fileID: 1877530628}
-  - component: {fileID: 1877530627}
   - component: {fileID: 1877530630}
   m_Layer: 0
   m_Name: Cube (9)
@@ -52402,27 +50955,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1877530627
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877530625}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1877530628
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52487,6 +51019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1882540557
 GameObject:
   m_ObjectHideFlags: 0
@@ -53368,7 +51902,6 @@ GameObject:
   - component: {fileID: 1898736505}
   - component: {fileID: 1898736508}
   - component: {fileID: 1898736507}
-  - component: {fileID: 1898736506}
   - component: {fileID: 1898736509}
   m_Layer: 0
   m_Name: Cube (1)
@@ -53392,27 +51925,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1898736506
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898736504}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1898736507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53477,6 +51989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &1901637891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53921,7 +52435,6 @@ GameObject:
   - component: {fileID: 1923135664}
   - component: {fileID: 1923135667}
   - component: {fileID: 1923135666}
-  - component: {fileID: 1923135665}
   - component: {fileID: 1923135668}
   m_Layer: 0
   m_Name: Cube (5)
@@ -53945,27 +52458,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1923135665
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923135663}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1923135666
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54030,6 +52522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1923836016
 GameObject:
   m_ObjectHideFlags: 0
@@ -54041,7 +52535,6 @@ GameObject:
   - component: {fileID: 1923836017}
   - component: {fileID: 1923836020}
   - component: {fileID: 1923836019}
-  - component: {fileID: 1923836018}
   - component: {fileID: 1923836021}
   m_Layer: 0
   m_Name: Cube (7)
@@ -54065,27 +52558,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1923836018
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923836016}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1923836019
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54150,6 +52622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1932838151
 GameObject:
   m_ObjectHideFlags: 0
@@ -54703,6 +53177,7 @@ Transform:
   - {fileID: 1896204390}
   - {fileID: 974388741}
   - {fileID: 307215082}
+  - {fileID: 137228786}
   - {fileID: 1793071744}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54940,7 +53415,6 @@ GameObject:
   - component: {fileID: 1967015246}
   - component: {fileID: 1967015249}
   - component: {fileID: 1967015248}
-  - component: {fileID: 1967015247}
   - component: {fileID: 1967015250}
   m_Layer: 0
   m_Name: Cube (2)
@@ -54964,27 +53438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1967015247
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967015245}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1967015248
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55049,6 +53502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1001 &1967605052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55463,7 +53918,6 @@ GameObject:
   - component: {fileID: 1969798976}
   - component: {fileID: 1969798979}
   - component: {fileID: 1969798978}
-  - component: {fileID: 1969798977}
   - component: {fileID: 1969798980}
   m_Layer: 0
   m_Name: Cube (5)
@@ -55487,27 +53941,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1969798977
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969798975}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1969798978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55572,6 +54005,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1972517617
 GameObject:
   m_ObjectHideFlags: 0
@@ -55709,7 +54144,6 @@ GameObject:
   - component: {fileID: 1992696863}
   - component: {fileID: 1992696866}
   - component: {fileID: 1992696865}
-  - component: {fileID: 1992696864}
   - component: {fileID: 1992696867}
   m_Layer: 0
   m_Name: Cube (7)
@@ -55733,27 +54167,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1992696864
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992696862}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1992696865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55818,6 +54231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &1998889773
 GameObject:
   m_ObjectHideFlags: 0
@@ -56046,7 +54461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Loading
+  m_text: Score 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
   m_sharedMaterial: {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
@@ -59202,7 +57617,6 @@ GameObject:
   - component: {fileID: 2107242847}
   - component: {fileID: 2107242850}
   - component: {fileID: 2107242849}
-  - component: {fileID: 2107242848}
   - component: {fileID: 2107242851}
   m_Layer: 0
   m_Name: Cube
@@ -59226,27 +57640,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2107242848
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107242846}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2107242849
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59311,6 +57704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &2107424304
 GameObject:
   m_ObjectHideFlags: 0
@@ -59448,7 +57843,6 @@ GameObject:
   - component: {fileID: 2111414199}
   - component: {fileID: 2111414202}
   - component: {fileID: 2111414201}
-  - component: {fileID: 2111414200}
   - component: {fileID: 2111414203}
   m_Layer: 0
   m_Name: Cube
@@ -59472,27 +57866,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2111414200
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111414198}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2111414201
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59557,6 +57930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &2113574987
 GameObject:
   m_ObjectHideFlags: 0
@@ -59568,7 +57943,6 @@ GameObject:
   - component: {fileID: 2113574988}
   - component: {fileID: 2113574991}
   - component: {fileID: 2113574990}
-  - component: {fileID: 2113574989}
   - component: {fileID: 2113574992}
   m_Layer: 0
   m_Name: Cube (2)
@@ -59592,27 +57966,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1275019751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2113574989
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113574987}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2113574990
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59677,6 +58030,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   cue: {fileID: 0}
+  puzzlePrefab: {fileID: 2217935878104398980, guid: 378eced96f542684f89741ba75a19955, type: 3}
+  emptyEffectPrefab: {fileID: 2199345444461168293, guid: 136fb7c7a5dc3654e86834b5f4ecd903, type: 3}
 --- !u!1 &2117906839
 GameObject:
   m_ObjectHideFlags: 0
@@ -60408,6 +58763,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactor
       objectReference: {fileID: 0}
+    - target: {fileID: 6019279743185985258, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
+      propertyPath: LeftHandAnchor
+      value: 
+      objectReference: {fileID: 3345703896140449945}
+    - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
+      propertyPath: RightHandAnchor
+      value: 
+      objectReference: {fileID: 1447245322081017121}
     - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
       propertyPath: onChopLeft.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -60430,6 +58797,14 @@ PrefabInstance:
       objectReference: {fileID: 602136504}
     - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
       propertyPath: onPalmRight.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 602136504}
+    - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
+      propertyPath: onFistLeftPowerful.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 602136504}
+    - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
+      propertyPath: onFistRightPowerful.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 602136504}
     m_RemovedComponents: []
@@ -60858,6 +59233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRCameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -61094,3 +59473,4 @@ SceneRoots:
   - {fileID: 2518151908303615412}
   - {fileID: 4239356712653786884}
   - {fileID: 1118861658}
+  - {fileID: 365083674}

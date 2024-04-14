@@ -95,31 +95,35 @@ public class Spawner : MonoBehaviour
                 dimensions.z = 0.01f;
             }
 
-            float cubeSize = 0.1f; 
-
-            int noOfCubesX = ((int) Mathf.Floor((dimensions.x - (cubeSize/2)) / cubeSize));
-            int noOfCubesY = 20;
-
-            float cubeSizeX = cubeSize;
-            float cubeSizeY = noOfCubesY * cubeSize < dimensions.y ? cubeSize : dimensions.y/noOfCubesY;
-           
-            List<GameObject> cubesToAdd = new List<GameObject>();
-
-            for (int i = 0; i < noOfCubesY; i++)
+            // Special case 02: Set wall thickness to something small instead of default value (1.0m)
+            if (_classification.Contains(OVRSceneManager.Classification.WallFace))
             {
-                for (int j = 0; j < noOfCubesX; j++)
-                {
-                    GameObject cube = Instantiate(cubePrefab);
-                    cube.SetActive(false); 
-                    cube.transform.SetParent(cubeParent.transform);
-                    cube.transform.localPosition = new Vector3((-(dimensions.x / 2)) + (j * cubeSizeX) + ((dimensions.x - (noOfCubesX * cubeSizeX))/2), (-(dimensions.y / 2)) + (i * cubeSizeY) + (cubeSizeY / 2), -(cubeSize / 2));
-                    cube.transform.localScale = new Vector3(cubeSizeX - (cubeSizeX * 0.1f), cubeSizeY - (cubeSizeY * 0.1f), cubeSize - (cubeSize * 0.1f));
-                    cube.transform.localRotation = Quaternion.identity;
-                    cubesToAdd.Add(cube);
-                }
-            }
+                float cubeSize = 0.1f;
 
-            FindObjectOfType<GameWall>().AddCubes(cubesToAdd, noOfCubesY, plane);
+                int noOfCubesX = ((int)Mathf.Floor((dimensions.x - (cubeSize / 2)) / cubeSize));
+                int noOfCubesY = 20;
+
+                float cubeSizeX = cubeSize;
+                float cubeSizeY = noOfCubesY * cubeSize < dimensions.y ? cubeSize : dimensions.y / noOfCubesY;
+
+                List<GameObject> cubesToAdd = new List<GameObject>();
+
+                for (int i = 0; i < noOfCubesY; i++)
+                {
+                    for (int j = 0; j < noOfCubesX; j++)
+                    {
+                        GameObject cube = Instantiate(cubePrefab);
+                        cube.SetActive(false);
+                        cube.transform.SetParent(cubeParent.transform);
+                        cube.transform.localPosition = new Vector3((-(dimensions.x / 2)) + (j * cubeSizeX) + ((dimensions.x - (noOfCubesX * cubeSizeX)) / 2), (-(dimensions.y / 2)) + (i * cubeSizeY) + (cubeSizeY / 2), -(cubeSize / 2));
+                        cube.transform.localScale = new Vector3(cubeSizeX - (cubeSizeX * 0.1f), cubeSizeY - (cubeSizeY * 0.1f), cubeSize - (cubeSize * 0.1f));
+                        cube.transform.localRotation = Quaternion.identity;
+                        cubesToAdd.Add(cube);
+                    }
+                }
+
+                FindObjectOfType<GameWall>().AddCubes(cubesToAdd, noOfCubesY, plane);
+            }
         }
 
         GameObject root = new GameObject("Root");

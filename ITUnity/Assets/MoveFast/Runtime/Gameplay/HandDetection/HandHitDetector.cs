@@ -49,7 +49,9 @@ namespace Oculus.Interaction.MoveFast
         public UnityEvent onHit;
 
         public UnityEvent onFistLeft;
+        public UnityEvent onFistLeftPowerful;
         public UnityEvent onFistRight;
+        public UnityEvent onFistRightPowerful;
         public UnityEvent onPalmLeft;
         public UnityEvent onPalmRight;
         public UnityEvent onChopLeft;
@@ -63,10 +65,25 @@ namespace Oculus.Interaction.MoveFast
         /// </summary>
         public IHand LastHand { get; private set; }
 
+        public Transform LeftHandAnchor;
+        public Transform RightHandAnchor; 
+        private Vector3 leftHandAnchorPosition; 
+        private Vector3 rightHandAnchorPosition; 
+        private Vector3 leftHandAnchorPreviousPosition; 
+        public Vector3 rightHandanchorPreviousPosition; 
+
         private void Start()
         {
             _triggerZone = new TriggerZoneList<IHand>(gameObject.AddComponent<TriggerZone>());
             _triggerZone.WhenAdded += TestForHitPose;
+        }
+
+        private void Update()
+        {
+            leftHandAnchorPreviousPosition = leftHandAnchorPosition;
+            leftHandAnchorPosition = LeftHandAnchor.position;
+            rightHandanchorPreviousPosition = rightHandAnchorPosition;
+            rightHandAnchorPosition = RightHandAnchor.position;
         }
 
         private void OnDestroy()
@@ -118,11 +135,23 @@ namespace Oculus.Interaction.MoveFast
 
                             if (handPoseList.isLeft)
                             {
-                                onFistLeft?.Invoke(); 
+                                float velocity = Vector3.Distance(leftHandAnchorPreviousPosition, leftHandAnchorPosition) * Time.deltaTime;
+                                Debug.Log("Hari " + velocity + " " + leftHandAnchorPreviousPosition + " " + leftHandAnchorPosition + " " + Time.deltaTime);
+                                
+                                if (velocity > 0.0005f)
+                                    onFistLeftPowerful?.Invoke();
+                                else
+                                    onFistLeft?.Invoke();
                             }
                             else
                             {
-                                onFistRight?.Invoke(); 
+                                float velocity = Vector3.Distance(rightHandanchorPreviousPosition, rightHandAnchorPosition) * Time.deltaTime;
+                                Debug.Log("Hari " + " " + rightHandanchorPreviousPosition  + " " + rightHandAnchorPosition + velocity);
+
+                                if (velocity > 0.0005f) 
+                                    onFistRightPowerful?.Invoke();
+                                else
+                                    onFistRight?.Invoke();
                             }
                             yield break;
                         }

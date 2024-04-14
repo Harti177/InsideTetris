@@ -21,11 +21,14 @@ public class GamePlay : MonoBehaviour
 
     private float time = 0f;
     private float playTime = 0.5f;
-    private float placeDownTime = 0f; 
+    private float placeDownTime = 0f;
+    private float piecesLeftUntilPuzzleExplodes = 0; 
 
     private int score = 0; 
     private int lines = 0;
-    private int level = 0; 
+    private int level = 0;
+    private int puzzleLevel = 50;
+    private int puzzleCode = 0;
    
     private GamePiece currentPiece;
 
@@ -40,6 +43,7 @@ public class GamePlay : MonoBehaviour
     private bool notResumed = false; 
 
     Array PieceTypeValues = Enum.GetValues(typeof(PieceType));
+    Array PuzzleTypeValues = Enum.GetValues(typeof(PuzzleType));
 
     #region UI
     [SerializeField] private GameObject loadingText;
@@ -55,6 +59,8 @@ public class GamePlay : MonoBehaviour
     [SerializeField] private TextMeshPro loadingTextText;
     [SerializeField] private TextMeshPro saveScoreTextText;
     [SerializeField] private GameObject highScoresText;
+    [SerializeField] private GameObject piecesLeftToSolvePuzzleText;
+    [SerializeField] private TextMeshPro piecesLeftToSolvePuzzleTextText;
     #endregion UI
 
     #region Audio
@@ -62,16 +68,23 @@ public class GamePlay : MonoBehaviour
     [SerializeField] private AudioSource gameOverAudio;
     [SerializeField] private AudioSource pieceDownAudio;
     [SerializeField] private AudioSource piecePlacedAudio;
+    [SerializeField] private AudioSource lineAudio;
     [SerializeField] private AudioSource gameBackgroundAudio;
     #endregion Audio
+
+    [SerializeField] private Material floorMaterial;
+    [SerializeField] private Material ceilingMaterial;
 
     [SerializeField] private Transform interactor;
 
     [SerializeField] private Transform indicator; 
 
-    private Color[] colors = new Color[3] { Color.red, Color.yellow, Color.blue };
+    private Color[] colors = new Color[3] { Color.red, Color.green, Color.blue };
 
     [SerializeField] private bool useSample;
+
+    //Puzzle
+    GamePuzzle gamePuzzle;
 
     // Update is called once per frame
     void Update()
@@ -138,7 +151,97 @@ public class GamePlay : MonoBehaviour
 
                 if (piecePlacedDown)
                 {
-                    piecePlacedAudio.Play(); 
+                    piecePlacedAudio.Play();
+                    piecesLeftUntilPuzzleExplodes--;
+                    piecesLeftToSolvePuzzleTextText.text = piecesLeftUntilPuzzleExplodes.ToString() + " left to solve puzzle before explosion";
+
+                    if (gamePuzzle != null)
+                    {
+                        int[,] indices;
+                        switch (gamePuzzle.puzzleType)
+                        {
+                            case PuzzleType.FourXTwo:
+                                indices = FourXTwo.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                                break;
+                            case PuzzleType.FiveXFive:
+                                indices = FiveXFive.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                                break;
+                            case PuzzleType.ThreeXThree:
+                                indices = ThreeXThree.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                                break;
+                            default:
+                                indices = FiveXFive.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                                break;
+                        }
+
+                        bool notFilled = false;
+                        for (int i = 0; i < indices.GetLength(0); i++)
+                        {
+                            if (!CheckBox(indices[i,0], indices[i, 1])) notFilled = true;
+
+                            if (notFilled)
+                            {
+                                break;
+                            }
+                        }
+                        if (!notFilled)
+                        {
+                            gamePuzzle = null; 
+                            score += 100;
+                            lineAudio.Play();
+                            piecesLeftUntilPuzzleExplodes = 0;
+                            piecesLeftToSolvePuzzleText.SetActive(false);
+                            
+                            /*for (int b = indices[0, 1]; b < array.GetLength(1); b++)
+                            {
+                                for (int a = indices[0, 0]; a <= indices[indices.GetLength(0) - 1, 0]; a++)
+                                {
+                                    EmptyBox(a, b);
+                                    array[a, b].DeActivatePuzzle();
+
+                                    if (b >= indices[indices.GetLength(0) - 1, 1] && b != array.GetLength(1) - 1)
+                                    {
+                                        if (CheckBox(a, b + 1))
+                                        {
+                                            FillBox(a, b + 1 - 5, true, GetBoxColor(a, b + 1));
+                                        }
+                                    }
+                                }
+                            }*/
+
+                            for (int i = 0; i < indices.GetLength(0); i++)
+                            {
+                                if (array[indices[i, 0], indices[i, 1]].IsPuzzleActive())
+                                {
+                                    int y = indices[i, 1];
+                                    int count = 0; 
+                                    while (y < yLength)
+                                    {
+                                        if (array[indices[i, 0], y].IsPuzzleActive())
+                                        {
+                                            EmptyBox(indices[i, 0], y);
+                                            array[indices[i, 0], y].DeActivatePuzzle();
+                                            count++; 
+                                        }
+                                        if (!array[indices[i, 0], y].IsPuzzleActive() && CheckBox(indices[i, 0], y))
+                                        {
+                                            FillBox(indices[i, 0], y - count, true, array[indices[i, 0],y].GetColor(), false);
+                                            EmptyBox(indices[i, 0], y);
+                                        }
+                                        y++; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if(gamePuzzle != null && piecesLeftUntilPuzzleExplodes <= 0)
+                    {
+                        piecesLeftToSolvePuzzleText.SetActive(false);
+                        GameOver();
+                        return; 
+                    }
+
                     int noOfLinesCompleteThisRound = 0; 
                     for (int j = 0; j < array.GetLength(1); j++)
                     {
@@ -156,17 +259,19 @@ public class GamePlay : MonoBehaviour
                         if (!notFilled)
                         {
                             noOfLinesCompleteThisRound++;
+                            lineAudio.Play();
                             for (int b = j; b < array.GetLength(1); b++)
                             {
                                 for (int a = 0; a < array.GetLength(0); a++)
                                 {
                                     EmptyBox(a, b);
 
+
                                     if(b != array.GetLength(1) - 1)
                                     {
                                         if(CheckBox(a, b + 1))
                                         {
-                                            FillBox(a, b, true, GetBoxColor(a, b + 1));
+                                            FillBox(a, b, true, GetBoxColor(a, b + 1), false);
                                         }
                                     }
                                 }
@@ -179,9 +284,27 @@ public class GamePlay : MonoBehaviour
                     score += 4;
 
                     if (noOfLinesCompleteThisRound > 0)
-                        score += (noOfLinesCompleteThisRound + (2 * (noOfLinesCompleteThisRound - 1))) * (100 * (int)Mathf.Ceil(xLength / 40f));
+                        score += (noOfLinesCompleteThisRound + (2 * (noOfLinesCompleteThisRound - 1))) * 100;
+                        //score += (noOfLinesCompleteThisRound + (2 * (noOfLinesCompleteThisRound - 1))) * (100 * (int)Mathf.Ceil(xLength / 40f));
                     loadingTextText.text = "Score " + score.ToString();
-                    lines += noOfLinesCompleteThisRound; 
+                    lines += noOfLinesCompleteThisRound;
+
+                    if (((score == 50) || (score > 0 && score/puzzleLevel >= 1)) && gamePuzzle == null)
+                    {
+                        puzzleLevel = score + 200; 
+                        gamePuzzle = new GamePuzzle();
+                        Debug.Log( "Hari " + (xLength / 10f) + " " + (xLength / 10f <= 20));
+                        piecesLeftUntilPuzzleExplodes = xLength/10f <= 20 ? 20 : xLength / 10f;
+                        piecesLeftToSolvePuzzleText.SetActive(true);
+                        piecesLeftToSolvePuzzleTextText.text = ((int)piecesLeftUntilPuzzleExplodes).ToString() + " left to solve puzzle before explosion";
+
+                        if (puzzleCode > Enum.GetValues(typeof(PuzzleType)).Length - 1) puzzleCode = 0;
+
+                        gamePuzzle.puzzleType = (PuzzleType)puzzleCode;
+                        puzzleCode++;
+                        gamePuzzle.xPosition = UnityEngine.Random.Range(0, xLength - 4);
+                        gamePuzzle.yPosition = UnityEngine.Random.Range(3, 7);
+                    }
                 }
 
                 int xPositionForNext = UnityEngine.Random.Range(0, array.GetLength(0));
@@ -189,8 +312,8 @@ public class GamePlay : MonoBehaviour
 
                 piecePlacedDown = false;
 
-                float speed = score > 50 ? (score / 50) : 5; 
-                playTime = 0.6f;
+                float speed = (score / 5000f) > 0.35f ? 0.35f : (score / 5000f); 
+                playTime = 0.75f - speed;
                 currentMove = null;
 
                 currentPiece = new GamePiece();
@@ -455,10 +578,42 @@ public class GamePlay : MonoBehaviour
                 newPieceValues = currentTetrisPiece.CalculateLeftPosition(currentPiece.xPosition, currentPiece.yPosition, array.GetLength(0), array.GetLength(1));
             }
 
+            if (currentMove != null && currentMove.moveType == MoveType.leftten)
+            {
+                piecePlacedDown = false;
+                newPieceValues = currentTetrisPiece.CalculateLeftPosition(currentPiece.xPosition, currentPiece.yPosition, array.GetLength(0), array.GetLength(1));
+
+                for (int i = 1; i < 9; i++)
+                {
+                    if (CheckBox(newPieceValues))
+                    {
+                        break; 
+                    }
+
+                    newPieceValues = currentTetrisPiece.CalculateLeftPosition(newPieceValues[0,0], newPieceValues[0,1], array.GetLength(0), array.GetLength(1));
+                }
+            }
+
             if (currentMove != null && currentMove.moveType == MoveType.right)
             {
                 piecePlacedDown = false; 
                 newPieceValues = currentTetrisPiece.CalculateRightPosition(currentPiece.xPosition, currentPiece.yPosition, array.GetLength(0), array.GetLength(1));
+            }
+
+            if (currentMove != null && currentMove.moveType == MoveType.rightten)
+            {
+                piecePlacedDown = false;
+                newPieceValues = currentTetrisPiece.CalculateRightPosition(currentPiece.xPosition, currentPiece.yPosition, array.GetLength(0), array.GetLength(1));
+
+                for (int i = 1; i < 9; i++)
+                {
+                    if (CheckBox(newPieceValues))
+                    {
+                        break;
+                    }
+
+                    newPieceValues = currentTetrisPiece.CalculateRightPosition(newPieceValues[0, 0], newPieceValues[0, 1], array.GetLength(0), array.GetLength(1));
+                }
             }
 
             if (currentMove != null && currentMove.moveType == MoveType.rotate)
@@ -483,7 +638,7 @@ public class GamePlay : MonoBehaviour
                 if (!CheckBox(newPieceValues))
                 {
                     if (currentPiece.values != null) EmptyBox(currentPiece.values);
-                    FillBox(newPieceValues);
+                    FillBox(newPieceValues, false);
                     currentPiece.xPosition = newPieceValues[0, 0];
                     currentPiece.yPosition = newPieceValues[0, 1];              
                     currentPiece.values = new int[4, 2];
@@ -496,6 +651,7 @@ public class GamePlay : MonoBehaviour
                     if((newPieceValues[0, 1] == yLength - 1 || newPieceValues[1, 1] == yLength - 1 || newPieceValues[2, 1] == yLength - 1 || newPieceValues[3, 1] == yLength - 1) && currentMove == null)
                     {
                         GameOver();
+                        return;
                     }
                     else if(currentMove != null)
                     {
@@ -510,6 +666,36 @@ public class GamePlay : MonoBehaviour
             }
 
             currentMove = null;
+
+            if(gamePuzzle != null)
+            {
+                if (!gamePuzzle.activated)
+                {
+                    gamePuzzle.activated = true; 
+                    int[,] indices;
+                    switch (gamePuzzle.puzzleType)
+                    {
+                        case PuzzleType.FourXTwo:
+                            indices = FourXTwo.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                            break;
+                        case PuzzleType.FiveXFive:
+                            indices = FiveXFive.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                            break;
+                        case PuzzleType.ThreeXThree:
+                            indices = ThreeXThree.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                            break;
+                        default:
+                            indices = FiveXFive.CalculateInnerIndices(gamePuzzle.xPosition, gamePuzzle.yPosition);
+                            break;
+                    }
+
+                    int indicesXLength = indices.GetLength(0);
+                    for (int i = 0; i < indicesXLength; i++)
+                    {
+                        array[indices[i, 0], indices[i, 1]].ActivatePuzzle();
+                    }
+                }
+            }
         }
 
         //Localtesting not in vr - Initialise the bricks in the wall 
@@ -551,10 +737,38 @@ public class GamePlay : MonoBehaviour
             xLength = array.GetLength(0);
             yLength = array.GetLength(1);
 
+            if(xLength < 40)
+            {
+                loadingTextText.text = "Not enough size wall length, Sorry";
+                return; 
+            }
+
+            if (xLength > 500)
+            {
+                loadingTextText.text = "Very high wall length, Sorry";
+                return;
+            }
+
+            if (yLength < 20)
+            {
+                loadingTextText.text = "Not enough wall height, Sorry";
+                return;
+            }
+
             loadingText.gameObject.SetActive(false);
             playButton.gameObject.SetActive(true);
             highScoresText.gameObject.SetActive(true);
             userUI.SetActive(true);
+
+            gameWall.GetFloor().GetComponent<MeshRenderer>().material = floorMaterial;
+
+            // Create a game object with a MeshFilter and MeshRenderer to display the mesh
+            GameObject polygonMesh = new GameObject("PolygonMesh");
+            MeshFilter meshFilter = polygonMesh.AddComponent<MeshFilter>();
+            MeshRenderer meshRenderer = polygonMesh.AddComponent<MeshRenderer>();
+            meshFilter.mesh = gameWall.GetFloor().GetComponent<MeshFilter>().mesh;
+            polygonMesh.transform.position = new Vector3(transform.position.x, gameWall.GetWallHeight(), transform.position.z);
+            meshRenderer.material = ceilingMaterial;
 
             CheckAndLoadGameIfSaved();
         }
@@ -562,120 +776,7 @@ public class GamePlay : MonoBehaviour
 
     private void MoveInteractor()
     {
-        int xPosition;
-        int yPosition;
-
-        (xPosition, yPosition) = GetCentrePosition();
-
-        SetInteractorPosition(xPosition, yPosition);
-    }
-
-    //Get centre of each tetris piece type 
-    private (int, int) GetCentrePosition()
-    {
-        int xPosition = -1;
-        int yPosition = -1;
-
-        switch (currentPiece.pieceType)
-        {
-            case PieceType.IBlock1:
-            case PieceType.IBlock2:
-            case PieceType.IBlock3:
-            case PieceType.IBlock4:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.OBlock1:
-            case PieceType.OBlock2:
-            case PieceType.OBlock3:
-            case PieceType.OBlock4:
-                xPosition = currentPiece.values[0, 0];
-                yPosition = currentPiece.values[0, 1];
-                break;
-            case PieceType.TBlock1:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.TBlock2:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.TBlock3:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.TBlock4:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.ZBlock1:
-                xPosition = currentPiece.values[0, 0];
-                yPosition = currentPiece.values[0, 1];
-                break;
-            case PieceType.ZBlock2:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.ZBlock3:
-                xPosition = currentPiece.values[3, 0];
-                yPosition = currentPiece.values[3, 1];
-                break;
-            case PieceType.ZBlock4:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.SBlock1:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.SBlock2:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.SBlock3:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.SBlock4:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.LBlock1:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.LBlock2:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.LBlock3:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.LBlock4:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.JBlock1:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.JBlock2:
-                xPosition = currentPiece.values[1, 0];
-                yPosition = currentPiece.values[1, 1];
-                break;
-            case PieceType.JBlock3:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-            case PieceType.JBlock4:
-                xPosition = currentPiece.values[2, 0];
-                yPosition = currentPiece.values[2, 1];
-                break;
-
-        }
-
-        return (xPosition, yPosition); 
+        SetInteractorPosition(currentPiece.values[0, 0], currentPiece.values[0, 1]);
     }
 
     //Get centre of each tetris piece type 
@@ -763,13 +864,13 @@ public class GamePlay : MonoBehaviour
 
     private async void CheckAndLoadGameIfSaved()
     {
-        savedGame = await saveLoadHandler.LoadGameAsync();
+        /*savedGame = await saveLoadHandler.LoadGameAsync();
         if (savedGame != null && 
             savedGame.gameBlockProperties.GetLength(0) == array.GetLength(0) &&
             savedGame.gameBlockProperties.GetLength(1) == array.GetLength(1))
         {
             resumeGameButton.SetActive(true);
-        }
+        }*/
     }
 
     public bool CheckBox(int[,] values)
@@ -787,18 +888,19 @@ public class GamePlay : MonoBehaviour
         return array[x, y].CheckBox();
     }
 
-    public void FillBox(int[,] values, bool lockIt = false)
+    public void FillBox(int[,] values, bool lockIt)
     {
         for (int i = 0; i < values.GetLength(0); i++)
         {
+            bool centre = i == 0 ? true : false; 
             if (values[i, 0] != -1 && values[i, 1] != -1)
-                FillBox(values[i, 0], values[i, 1], lockIt, currentPiece.color);
+                FillBox(values[i, 0], values[i, 1], lockIt, currentPiece.color, centre);
         }
     }
 
-    private void FillBox(int x, int y, bool lockIt, Color color)
+    private void FillBox(int x, int y, bool lockIt, Color color, bool centre)
     {
-        array[x, y].FillBox(color, lockIt);
+        array[x, y].FillBox(color, lockIt, centre);
     }
 
     public void EmptyBox(int[,] values)
@@ -888,6 +990,7 @@ public class GamePlay : MonoBehaviour
         score = 0;
         lines = 0;
         level = 0;
+        piecesLeftUntilPuzzleExplodes = 0; 
 
         playButton.SetActive(false);
         resumeGameButton.SetActive(false);
@@ -902,6 +1005,8 @@ public class GamePlay : MonoBehaviour
 
         loadingText.SetActive(true);
         loadingTextText.text = "Score " + score.ToString();
+
+        piecesLeftToSolvePuzzleText.SetActive(false);
 
         interactor.gameObject.SetActive(true);
 
@@ -920,7 +1025,7 @@ public class GamePlay : MonoBehaviour
                 if (savedGame.gameBlockProperties[i, j].locked)
                 {
                     Color color = new Color(savedGame.gameBlockProperties[i, j].color.r, savedGame.gameBlockProperties[i, j].color.g, savedGame.gameBlockProperties[i, j].color.b, savedGame.gameBlockProperties[i, j].color.a);
-                    array[i, j].FillBox(color, true);
+                    array[i, j].FillBox(color, true, false);
                 }
                 else
                 {
@@ -992,6 +1097,7 @@ public class GamePlay : MonoBehaviour
         saveHighScoreButton.SetActive(false);
         saveScoreText.SetActive(false);
         loadingText.SetActive(false);
+        piecesLeftToSolvePuzzleText.SetActive(false);
 
         gameStarted = false;
         gamePaused = false;
@@ -1016,8 +1122,14 @@ public class GamePlay : MonoBehaviour
             case "left":
                 moveType = MoveType.left;
                 break;
+            case "leftten":
+                moveType = MoveType.leftten;
+                break;
             case "right":
                 moveType = MoveType.right;
+                break;
+            case "rightten":
+                moveType = MoveType.rightten;
                 break;
             case "down":
                 moveType = MoveType.down;
