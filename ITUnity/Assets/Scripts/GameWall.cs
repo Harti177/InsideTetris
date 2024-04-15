@@ -121,7 +121,7 @@ public class GameWall : MonoBehaviour
             }
         }
 
-        floor = MeshGeneration.CreateMeshObject(vertices.ToArray());
+        floor = MeshGeneration.CreateMeshObject(vertices.ToArray(), _walls[0].transform);
     }
 
     public void CreateBricksSample(out GameBlock[,] array)

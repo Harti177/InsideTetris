@@ -4962,7 +4962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &242436105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54461,7 +54461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score 0
+  m_text: Loading...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
   m_sharedMaterial: {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
@@ -58762,10 +58762,6 @@ PrefabInstance:
     - target: {fileID: 6019279743185985258, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
       propertyPath: m_Name
       value: Interactor
-      objectReference: {fileID: 0}
-    - target: {fileID: 6019279743185985258, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846694215612195369, guid: e34ce75a2effc6d49b2df40cabef4064, type: 3}
       propertyPath: LeftHandAnchor

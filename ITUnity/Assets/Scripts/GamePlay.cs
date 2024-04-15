@@ -357,7 +357,6 @@ public class GamePlay : MonoBehaviour
             int[,] newPieceValues = null;
 
             PieceType pieceType = currentPiece.pieceType;
-            Debug.Log(pieceType);
 
             TetrisPiece currentTetrisPiece = new TBlock1();
             TetrisPiece toRotateTetrisPiece = new TBlock1();
@@ -634,7 +633,6 @@ public class GamePlay : MonoBehaviour
 
             if (newPieceValues != null)
             {
-                Debug.Log(string.Join(" ", newPieceValues.Cast<int>()));
                 if (!CheckBox(newPieceValues))
                 {
                     if (currentPiece.values != null) EmptyBox(currentPiece.values);
@@ -764,6 +762,9 @@ public class GamePlay : MonoBehaviour
 
             // Create a game object with a MeshFilter and MeshRenderer to display the mesh
             GameObject polygonMesh = new GameObject("PolygonMesh");
+            polygonMesh.transform.SetParent(gameWall.GetFloor().transform.parent);
+            polygonMesh.transform.localPosition = gameWall.GetFloor().transform.localPosition;
+            polygonMesh.transform.localRotation = gameWall.GetFloor().transform.localRotation;
             MeshFilter meshFilter = polygonMesh.AddComponent<MeshFilter>();
             MeshRenderer meshRenderer = polygonMesh.AddComponent<MeshRenderer>();
             meshFilter.mesh = gameWall.GetFloor().GetComponent<MeshFilter>().mesh;
@@ -852,25 +853,30 @@ public class GamePlay : MonoBehaviour
             for (int j = 0; j < array.GetLength(1); j++)
             {
                 EmptyBox(i, j);
+                if (array[i, j].IsPuzzleActive()) array[i, j].DeActivatePuzzle(); 
             }
         }
 
         currentPiece = null;
         currentMove = null;
+        gamePuzzle = null;
         score = 0;
         level = 0;
-        lines = 0; 
+        lines = 0;
+        puzzleLevel = 50;
+        puzzleCode = 0;
+        piecesLeftUntilPuzzleExplodes = 0;
     }
 
     private async void CheckAndLoadGameIfSaved()
     {
-        /*savedGame = await saveLoadHandler.LoadGameAsync();
+        savedGame = await saveLoadHandler.LoadGameAsync();
         if (savedGame != null && 
             savedGame.gameBlockProperties.GetLength(0) == array.GetLength(0) &&
             savedGame.gameBlockProperties.GetLength(1) == array.GetLength(1))
         {
             resumeGameButton.SetActive(true);
-        }*/
+        }
     }
 
     public bool CheckBox(int[,] values)
@@ -986,11 +992,14 @@ public class GamePlay : MonoBehaviour
 
         currentPiece = null;
         currentMove = null;
+        gamePuzzle = null;
 
         score = 0;
         lines = 0;
         level = 0;
-        piecesLeftUntilPuzzleExplodes = 0; 
+        piecesLeftUntilPuzzleExplodes = 0;
+        puzzleLevel = 50;
+        puzzleCode = 0; 
 
         playButton.SetActive(false);
         resumeGameButton.SetActive(false);
@@ -1065,7 +1074,7 @@ public class GamePlay : MonoBehaviour
         interactor.gameObject.SetActive(!gamePaused);
         pauseButton.SetActive(gamePaused);
         endButton.SetActive(gamePaused);
-        saveHighScoreButton.SetActive(gamePaused);
+        if(!gamePaused) saveHighScoreButton.SetActive(gamePaused);
         saveScoreText.SetActive(gamePaused);
         userUI.SetActive(gamePaused);
 

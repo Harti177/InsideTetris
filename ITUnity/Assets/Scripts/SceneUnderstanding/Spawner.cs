@@ -56,6 +56,7 @@ public class Spawner : MonoBehaviour
         Vector3 localScale = transform.localScale;
 
         GameObject cubeParent = new GameObject("DynamicGamePlayObject");
+        cubeParent.transform.SetParent(transform);
         cubeParent.transform.position = transform.position;
         cubeParent.transform.rotation = transform.rotation;
         //cubeGO.transform.localScale = transform.localScale;

@@ -12,7 +12,7 @@ public class MeshGeneration : MonoBehaviour
 		//CreateMeshObject(polygonVertices);
 	}
 
-	public static GameObject CreateMeshObject(Vector3[] polygonVerticesArray)
+	public static GameObject CreateMeshObject(Vector3[] polygonVerticesArray, Transform parent)
     {
 		List<Vector3> polygonVerticesList = polygonVerticesArray.ToList();
 		List<Triangle> triangles = TriangulateConcavePolygon(polygonVerticesList);
@@ -41,6 +41,7 @@ public class MeshGeneration : MonoBehaviour
 
 		// Create a game object with a MeshFilter and MeshRenderer to display the mesh
 		GameObject polygonMesh = new GameObject("PolygonMesh");
+		polygonMesh.transform.SetParent(parent);
 		MeshFilter meshFilter = polygonMesh.AddComponent<MeshFilter>();
 		MeshRenderer meshRenderer = polygonMesh.AddComponent<MeshRenderer>();
 		meshFilter.mesh = mesh;

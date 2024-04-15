@@ -89,7 +89,7 @@ public class AzureHandler : MonoBehaviour
                 {
                     highScores[highScores.IndexOf(highscore)].userScore = userScore;
 
-                    json = JsonConvert.SerializeObject(highScores);
+                    json = JsonConvert.SerializeObject(highScores.OrderByDescending(o => o.userScore).ToList());
 
                     Debug.Log(json);
                 }
